@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    img{
+        width: 50px;
+        position: absolute;
+        transition: all 0.5s; 
+
+    }
+    
+</style>
+<body>
+    <img src="images.png" id="png">
+
+</body>
+<script> 
+let png = document.getElementById("png")
+function getRndInteger(min,max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+function getpng(){
+    let x = getRndInteger(1, 50)
+    let y = getRndInteger(1, 60)
+    png.style.top = `${y}%`
+    png.style.left = `${y}%`
+
+}
+setInterval(getpng, 1000)
+console.log(getRndInteger(1,3))
+</script>
+</html>
